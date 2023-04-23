@@ -30,5 +30,6 @@
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Controller/CEducacion.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/Entity/Rol.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Repository/REducacion.java
+/home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/WebConfig.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/jwt/JwtEntryPoint.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/dto/JwtDto.java

@@ -1,6 +1,7 @@
 com/porfolio/ap/Security/Controller/Mensaje.class
 com/porfolio/ap/Security/Repository/RolRepository.class
 com/porfolio/ap/Security/dto/NuevoUsuario.class
+com/porfolio/ap/WebConfig.class
 com/porfolio/ap/Controller/CEducacion.class
 com/porfolio/ap/Security/jwt/JwtEntryPoint.class
 com/porfolio/ap/Controller/PersonaController.class
