@@ -35,7 +35,7 @@ public class JwtDto {
         return userName;
     }
 
-    public void setUserName(String nombreUsuario) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
