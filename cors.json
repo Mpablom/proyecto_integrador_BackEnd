@@ -1,0 +1,12 @@
+{
+  "origins": [
+    "https://frontapp-64aae.web.app/",
+    "https://frontapp-64aae.firebaseapp.com/"
+  ],
+  "methods": [
+    "GET",
+    "POST",
+    "PUT",
+    "DELETE"
+  ]
+}
