@@ -20,7 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = {"https://frontapp-64aae.web.app","https://frontapp-64aae.firebaseapp.com","http://localhost:4200"})
 @RequestMapping("/persona")
 public class PersonaController {
-    @Autowired IPersonaService ipersonaService;
+    @Autowired 
+    IPersonaService ipersonaService;
     
     @GetMapping("/traer")
     public List<Persona> getPersona(){

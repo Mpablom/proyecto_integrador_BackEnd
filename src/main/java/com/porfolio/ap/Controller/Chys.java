@@ -14,10 +14,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins={"https://frontapp-64aae.web.app","https://frontapp-64aae.firebaseapp.com","http://localhost:4200"})
+@CrossOrigin(origins = {"https://frontapp-64aae.web.app","https://frontapp-64aae.firebaseapp.com","http://localhost:4200"})
 @RequestMapping("/skill")
 public class Chys {
-    @Autowired Shys shys;
+    @Autowired 
+    Shys shys;
 
     @GetMapping("/lista")
     public ResponseEntity<List<Hys>> list(){

@@ -4,6 +4,8 @@
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/Repository/UsuarioRepository.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/Service/UsuarioService.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/jwt/JwtProvider.java
+/home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Service/Shys.java
+/home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Entity/Hys.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/Controller/Mensaje.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Entity/Educacion.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Entity/Persona.java
@@ -16,6 +18,7 @@
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/jwt/JwtTokenFilter.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Dto/dtoEducacion.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/MainSecurity.java
+/home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Controller/Chys.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Service/SExperiencia.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/Controller/AuthController.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Service/Seducacion.java
@@ -29,7 +32,9 @@
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/Enums/RolName.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Controller/CEducacion.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/Entity/Rol.java
+/home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Dto/dtoHys.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Repository/REducacion.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/WebConfig.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/jwt/JwtEntryPoint.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/dto/JwtDto.java
+/home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Repository/Rhys.java
