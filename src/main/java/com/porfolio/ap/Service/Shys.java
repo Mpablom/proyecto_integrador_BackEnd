@@ -10,8 +10,8 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-@Transactional
 @Service
+@Transactional
 public class Shys {
     @Autowired
     Rhys rhys;

@@ -8,6 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface Rhys extends JpaRepository<Hys, Integer > {
-    Optional<Hys> findByName(String name);
+    public Optional<Hys> findByName(String name);
     public boolean existsByName(String name);
 }
