@@ -1,16 +1,20 @@
 package com.porfolio.ap.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Hys {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotNull
+    @Size(min = 1, max = 50,message = "no cumple con la longitud")
     private  String name;
+    @NotNull
+    @Size(min = 1, max = 50,message = "no cumple con la longitud")
     private int porcentaje;
 
     public Hys() {
