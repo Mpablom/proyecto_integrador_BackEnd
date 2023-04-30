@@ -23,8 +23,8 @@
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/Controller/AuthController.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Service/Seducacion.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Security/Entity/UsuarioPrincipal.java
+/home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Dto/dtoPersona.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Entity/Experiencia.java
-/home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Interface/IPersonaService.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Dto/dtoExperiencia.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/ApApplication.java
 /home/pablo/Documents/GitHub/proyecto_integrador_BackEnd/src/main/java/com/porfolio/ap/Service/ImpPersonaService.java

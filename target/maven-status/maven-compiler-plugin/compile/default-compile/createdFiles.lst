@@ -32,9 +32,9 @@ com/porfolio/ap/Security/dto/JwtDto.class
 com/porfolio/ap/Entity/Persona.class
 com/porfolio/ap/Security/MainSecurity.class
 com/porfolio/ap/Security/Service/RolService.class
-com/porfolio/ap/Interface/IPersonaService.class
 com/porfolio/ap/Entity/Hys.class
 com/porfolio/ap/Security/Service/UserDetailsServiceImpl.class
+com/porfolio/ap/Dto/dtoPersona.class
 com/porfolio/ap/Repository/Rhys.class
 com/porfolio/ap/Security/Repository/UsuarioRepository.class
 com/porfolio/ap/Security/Entity/Usuario.class
