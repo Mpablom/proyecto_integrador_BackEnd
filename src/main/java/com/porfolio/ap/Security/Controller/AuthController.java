@@ -29,15 +29,15 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins =  {"https://frontapp-64aae.web.app","https://frontapp-64aae.firebaseapp.com","http://localhost:4200"})
 public class AuthController {
     @Autowired
-    PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
     @Autowired
-    AuthenticationManager authenticationManager;
+    private AuthenticationManager authenticationManager;
     @Autowired
-    UsuarioService usuarioService;
+    private UsuarioService usuarioService;
     @Autowired
-    RolService rolService;
+    private RolService rolService;
     @Autowired
-    JwtProvider jwtProvider;
+    private JwtProvider jwtProvider;
 
     @PostMapping("/nuevo")
     public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult){
