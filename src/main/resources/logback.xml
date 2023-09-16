@@ -1,0 +1,25 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %highlight(%-5level) %magenta([%t]) %green(%logger{15}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <property name="WARN" value="yellow" />
+    <property name="ERROR" value="red" />
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+    <conversionRule conversionWord="highlight" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+</configuration>
+<!--<configuration debug="true">
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%highlight([%-5level]) [%d{ISO8601}] %cyan([%logger{36}]) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="ALL">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>-->
