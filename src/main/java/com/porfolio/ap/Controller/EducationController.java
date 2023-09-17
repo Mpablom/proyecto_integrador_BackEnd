@@ -6,6 +6,8 @@ import com.porfolio.ap.Security.Controller.Mensaje;
 import com.porfolio.ap.Service.EducationService;
 
 import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,9 +20,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/educacion")
 @CrossOrigin(origins = {"https://frontapp-64aae.web.app","https://frontapp-64aae.firebaseapp.com","http://localhost:4200"})
 public class EducationController {
+    private final EducationService educationService;
+
     @Autowired
-    private EducationService educationService;
-    
+    public EducationController(EducationService educationService) {
+        this.educationService = educationService;
+    }
+
     @GetMapping("/lista")
     public ResponseEntity<List<Education>> list(){
         List<Education> list = educationService.list();
@@ -28,9 +34,9 @@ public class EducationController {
     }
     
     @GetMapping("/detail/{id}")
-    public ResponseEntity<Education> getById(@PathVariable("id") Long id){
+    public ResponseEntity<?> getById(@PathVariable("id") Long id){
         if(!educationService.existsById(id)){
-            return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(new Mensaje("No existe el ID"), HttpStatus.BAD_REQUEST);
         }
         
         Education education = educationService.getOne(id).get();
@@ -50,9 +56,11 @@ public class EducationController {
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody EducationDTO educationDTO){
-        String validationResult = educationService.validateNameEducation(educationDTO);
-        if (validationResult != null){
-            return new ResponseEntity<>(new Mensaje(validationResult), HttpStatus.BAD_REQUEST);
+        if (StringUtils.isBlank(educationDTO.getNombreE())){
+            return new ResponseEntity<>(new Mensaje("El nombre es obligatorio y no puede estar vacío."), HttpStatus.BAD_REQUEST);
+        }
+        if (educationService.existsByNombreE(educationDTO.getNombreE())){
+            return new ResponseEntity<>(new Mensaje("El nombre ya existe."), HttpStatus.BAD_REQUEST);
         }
         Education education = new Education(educationDTO.getNombreE(), educationDTO.getDescripcionE());
         educationService.save(education);
@@ -63,10 +71,16 @@ public class EducationController {
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id")Long id, @RequestBody EducationDTO educationDTO){
-        String validationResult = educationService.validateEducation(id,educationDTO);
-        if (validationResult != null){
-            return new ResponseEntity<>(new Mensaje(validationResult), HttpStatus.BAD_REQUEST);
+        if(!educationService.existsById(id)){
+            return new ResponseEntity<>(new Mensaje("No existe el ID."), HttpStatus.BAD_REQUEST);
         }
+        if(educationService.existsByNombreE(educationDTO.getNombreE()) && educationService.getByNombreE(educationDTO.getNombreE()).get().getId() != id){
+            return new ResponseEntity<>(new Mensaje("Ese Nombre ya existe."), HttpStatus.BAD_REQUEST);
+        }
+        if(StringUtils.isBlank(educationDTO.getNombreE())){
+            return new ResponseEntity<>(new Mensaje("El campo no puede estar vacío."), HttpStatus.BAD_REQUEST);
+        }
+
         Education education = educationService.getOne(id).get();
         BeanUtils.copyProperties(educationDTO, education);
         educationService.save(education);

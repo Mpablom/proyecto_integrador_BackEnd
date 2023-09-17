@@ -14,6 +14,4 @@ public interface HardYSoftService {
     void delete(Long id);
     boolean existsById(Long id);
     boolean existsByName(String name);
-    String validateHardYSoft(Long id, HardYSoftDTO hardYSoftDTO);
-    String validateHardYSoftName(HardYSoftDTO hardYSoftDTO);
 }

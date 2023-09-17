@@ -15,6 +15,4 @@ public interface EducationService {
     void delete(Long id);
     boolean existsById(Long id);
     boolean existsByNombreE(String nombreE);
-    String validateEducation(Long id, EducationDTO educationDTO);
-    String validateNameEducation(EducationDTO educationDTO);
 }

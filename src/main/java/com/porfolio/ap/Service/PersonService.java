@@ -14,6 +14,5 @@ public interface PersonService {
     void delete(Long id);
     boolean existsById(Long id);
     boolean existsByNombre(String nombre);
-    String validatePerson(Long id, PersonDTO personDTO);
 }
 

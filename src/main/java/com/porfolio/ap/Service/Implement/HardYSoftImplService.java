@@ -59,28 +59,4 @@ public class HardYSoftImplService implements HardYSoftService {
         return hardYSoftRepository.existsByName(name);
     }
 
-    @Override
-    public String validateHardYSoft(Long id, HardYSoftDTO hardYSoftDTO){
-        if (!existsById(id)){
-            return "El id no existe";
-        }
-        if (existsByName(hardYSoftDTO.getName()) && getByName(hardYSoftDTO.getName()).get().getId() != id){
-            return "El skill ya existe";
-        }
-        if (StringUtils.isBlank(hardYSoftDTO.getName())){
-            return "El nombre es obligatorio";
-        }
-        return null;
-    }
-
-    @Override
-    public String validateHardYSoftName(HardYSoftDTO hardYSoftDTO){
-        if(StringUtils.isBlank(hardYSoftDTO.getName())) {
-            return "El nombre es obligatorio";
-        }
-        if(existsByName(hardYSoftDTO.getName())) {
-            return "Esa Skill existe";
-        }
-        return null;
-    }
 }

@@ -58,27 +58,4 @@ public class ExperienceImplService implements ExperienceService {
         return experienceRepository.existsByNombreE(nombreE);
     }
 
-    @Override
-    public String validateExperience(Long id, ExperienceDTO experienceDTO) {
-        if(!existsById(id)){
-            return "El id no existe";
-        }
-        if(existsByNombreE(experienceDTO.getNombreE()) && getByNombreE(experienceDTO.getNombreE()).get().getId() != id){
-            return "Esa experiencia ya existe";
-        }
-        if(StringUtils.isBlank(experienceDTO.getNombreE())){
-            return "El nombre es obligatorio";
-        }
-        return null;
-    }
-
-    public String validateExperienceName(ExperienceDTO experienceDTO){
-        if(StringUtils.isBlank(experienceDTO.getNombreE())) {
-            return "El nombre es obligatorio";
-        }
-        if(existsByNombreE(experienceDTO.getNombreE())) {
-            return "Esa experiencia existe";
-        }
-        return null;
-    }
 }

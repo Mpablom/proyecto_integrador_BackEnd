@@ -58,29 +58,5 @@ public class EducationImplService implements EducationService {
         return educationRepository.existsByNombreE(nombreE);
     }
 
-    @Override
-    public String validateEducation(Long id, EducationDTO educationDTO){
-        if(!existsById(id)){
-            return "No existe el ID";
-        }
-        if(existsByNombreE(educationDTO.getNombreE()) && getByNombreE(educationDTO.getNombreE()).get().getId() != id){
-            return "Ese Nombre ya existe";
-        }
-        if(StringUtils.isBlank(educationDTO.getNombreE())){
-            return "El campo no puede estar vacío";
-        }
-        return null;
-    }
 
-    @Override
-    public String validateNameEducation(EducationDTO educationDTO){
-        if (StringUtils.isBlank(educationDTO.getNombreE())){
-            return "El nombre es obligatorio y no puede estar vacío.";
-        }
-        if (existsByNombreE(educationDTO.getNombreE())){
-            return "El nombre ya existe";
-        }
-
-        return null;
-    }
 }

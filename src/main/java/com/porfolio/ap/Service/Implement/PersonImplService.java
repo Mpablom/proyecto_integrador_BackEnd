@@ -57,17 +57,4 @@ public class PersonImplService implements PersonService {
         return personRepository.existsByNombre(nombre);
     }
 
-    @Override
-    public String validatePerson(Long id, PersonDTO personDTO) {
-        if (!existsById(id)) {
-            return "No existe el ID";
-        }
-        if (existsByNombre(personDTO.getNombre()) && getByNombre(personDTO.getNombre()).get().getId() != id) {
-            return "Ese Nombre ya existe";
-        }
-        if (StringUtils.isBlank(personDTO.getNombre())) {
-            return "El campo no puede estar vacío";
-        }
-        return null;
-    }
 }
